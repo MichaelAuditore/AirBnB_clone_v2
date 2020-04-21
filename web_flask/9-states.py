@@ -34,7 +34,7 @@ def list_states(id):
         city = []
         for c in cities:
                 if (cities[c].state_id == new[0][0]):
-                        city.append([cities[c].id, cities[c].name])
+                        city.append([cities[c].name, cities[c].id])
         city.sort()
         return (render_template('9-states.html', S=new, C=city, F=1))
 

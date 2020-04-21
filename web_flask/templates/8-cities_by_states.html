@@ -7,7 +7,7 @@
     <H1>States</H1>
     <UL>
       {% for state in S %}
-      <LI>{{state.0}}: <B>{{state.1}}</B>
+      <LI>{{state.1}}: <B>{{state.0}}</B>
 	<UL>
 	  {% for city in C %}
 	  {%- if city.1 == state.1 %}

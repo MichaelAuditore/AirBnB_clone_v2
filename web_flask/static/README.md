@@ -1,0 +1,1 @@
+### Folder for static content like styles, images

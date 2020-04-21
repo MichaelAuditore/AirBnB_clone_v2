@@ -8,18 +8,21 @@
     <H1>States</H1>
     <UL>
       {% for state in S %}
-      <LI>{{state.0}}: <B>{{state.1}}</B>
-      </LI>
+      <LI>{{state.1}}: <B>{{state.0}}</B></LI>
       {% endfor %}
     </UL>
     {% else %}
-    {% for state in S %}
-    <H1>State: {{state.1}}</H1>
-    <H3>Cities</H3>
+    {%- for state in S %}
+    {%- if state.1 == ID %}
+    <H1>State: {{state.0}}</H1>
+    {% endif -%}
+    {% endfor -%}
+    <H3>Cities:</H3>
     <UL>
       {% for city in C %}
+      {% if city.1 == ID %}
       <LI>{{city.2}}: <B>{{city.0}}</B></LI>
-      {% endfor %}
+      {% endif %}
       {% endfor %}
     {% endif %}
   </BODY>

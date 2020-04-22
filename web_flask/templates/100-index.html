@@ -50,24 +50,30 @@
       </section>
       <section class="places">
 	<h1>Places</h1>
-	{%- for place in P %}
-	<article>
-	  <div class="title_box">
-	    <h2>{{place.0}}</h2>
-	    <div class="price_by_night">${{place.1}}</div>
-	  </div>
-	  <div class="information">
-	    <div class="max_guest">{{place.2}} Guests</div>
-            <div class="number_rooms">{{place.3}} Bedroom</div>
-            <div class="number_bathrooms">{{place.4}} Bathroom</div>
-	  </div>
-	  <div class="user">
-            <b>Owner:</b> {{place.5}}
-          </div>
-          <div class="description">
-	    {{place.6|safe}}
-          </div>
-	</article>
+	{%- for place in range(P|length) %}
+	{%- if (place %2 == 0) %}
+	<div class="rows">
+	  {% endif -%}
+	  <article>
+	    <div class="title_box">
+	      <h2>{{P[place].0}}</h2>
+	      <div class="price_by_night">${{P[place].1}}</div>
+	    </div>
+	    <div class="information">
+	      <div class="max_guest">{{P[place].2}} Guests</div>
+              <div class="number_rooms">{{P[place].3}} Bedroom</div>
+              <div class="number_bathrooms">{{P[place].4}} Bathroom</div>
+	    </div>
+	    <div class="user">
+              <b>Owner:</b> {{P[place].5}}
+            </div>
+            <div class="description">
+	      {{P[place].6|safe}}
+            </div>
+	  </article>
+	  {%- if (place %2 != 0) %}
+	</div>
+	{%- endif %}
 	{% endfor -%}
       </section>
     </div>

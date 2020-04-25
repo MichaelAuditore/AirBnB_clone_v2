@@ -10,12 +10,6 @@
     text-align: left;
     font-size: 30px;
 }
-.rows {
-    display: flex;
-    width: 100%;
-    flex-flow: row wrap;
-    justify-content: center;
-}
 .places article {
     width: 390px;
     padding: 20px;
@@ -24,9 +18,9 @@
     border-radius: 4px;
 }
 .places h2 {
-	font-size: 30px;
-	text-align: center;
-	margin-top: 0;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
 }
 .title_box {
     display: flex;

@@ -130,7 +130,7 @@ def airbnb():
                   for city in cities]
         cities.sort()
 
-        return (render_template('6-index.html', S=states, C=cities,
+        return (render_template('10-hbnb_filters.html', S=states, C=cities,
                                 A=amenities))
 
 

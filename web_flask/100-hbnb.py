@@ -39,7 +39,7 @@ def full_airbnb():
                                                    places[p].description])
 
         new_places.sort()
-        return (render_template('100-index.html', S=states, C=cities,
+        return (render_template('100-hbnb.html', S=states, C=cities,
                                 A=amenities, P=new_places))
 
 
